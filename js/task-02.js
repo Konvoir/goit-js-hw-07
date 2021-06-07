@@ -6,8 +6,14 @@ const ingredients = [
     'Зелень',
     'Приправы',
   ];
-  document.createElement();
+  
 
-  Напиши скрипт, который для каждого элемента массива `ingredients` создаст
-отдельный `li`, после чего вставит все `li` за одну операцию в список
-`ul.ingredients`. Для создания DOM-узлов используй `document.createElement()`
+  const listIngredients = ingredients.map(e => {
+    const teg = document.createElement('li');
+    teg.textContent = e;
+    return teg;
+  });
+
+  const lists = document.querySelector('ul');
+
+  lists.append(...listIngredients);
