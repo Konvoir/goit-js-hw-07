@@ -6,5 +6,12 @@ console.log(message);
 
 const heddingText = document.querySelectorAll('.item');
 // const tegs = heddingText.children.children
-console.log(heddingText);
+
 // текст заголовка
+const text = {... heddingText};
+
+console.log(text);
+
+
+const ara = text.firstElementChild;
+console.log("~ ara", ara)
