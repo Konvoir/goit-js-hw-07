@@ -1,6 +1,6 @@
 const refs = {
     input: document.querySelector('input'),
-    inputValue:  document.querySelector('#validation-input')
+    // inputValue:  document.querySelector('#validation-input')
 };
 const totalLength = refs.input.getAttribute('data-length');
 
@@ -17,7 +17,7 @@ function onInputBlur (evt) {
     refs.input.classList.remove('invalid');
     };
 
-    
+
     function inValid (){
         refs.input.classList.remove('valid');
         refs.input.classList.add('invalid');
