@@ -1,15 +1,11 @@
-const refs = {
-    input: document.querySelector('input'),
-    // inputValue:  document.querySelector('#validation-input')
-};
-const totalLength = refs.input.getAttribute('data-length');
+const refs = { input: document.querySelector('input')   };
+const totalLength = Number(refs.input.getAttribute('data-length'));
 
 refs.input.addEventListener('blur', onInputBlur);
 
 function onInputBlur (evt) {
     const val = (evt.target.value);
-  if (val.length >= totalLength) { valid()
-} else {inValid() };
+  if (val.length === totalLength) { valid()} else {inValid() };
 };
 
     function valid (){
