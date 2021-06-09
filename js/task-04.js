@@ -1,17 +1,20 @@
-let counterValue = 0;
-
-const spanValue = document.querySelector('#value');
+let counterValue= document.querySelector('#value');
 const buttonDecrement = document.querySelector('[data-action="decrement"]');
 const buttonIncrement = document.querySelector('[data-action="increment"]');
 
+let spanValue = Number(counterValue.textContent);
+console.log("~ spanValue", spanValue)
 
 buttonDecrement.addEventListener('click', onButtonDecrement);
 buttonIncrement.addEventListener('click', onButtonIncrement);
 
-function onButtonDecrement () {counterValue -= 1;
+function onButtonDecrement () {spanValue -= 1;
+  counterValue.innerText = spanValue
+
   console.log("~ counterValue ", counterValue );};
   
-function onButtonIncrement () {counterValue += 1
+function onButtonIncrement () {spanValue += 1
+  counterValue.innerText = spanValue
   console.log("~ counterValue ", counterValue );};
 
 
