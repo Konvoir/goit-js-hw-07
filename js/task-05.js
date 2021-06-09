@@ -3,10 +3,28 @@ input: document.querySelector('#name-input'),
 output: document.querySelector('#name-output')};
 // if (inputEl.value) {outputEl.value = inputEl.value};
 
-refs.input.addEventListener('input', onInputChange);
-if (!evt.currentTarget.value.length) {refs.output.textContent = 'незнакомец'};
-function onInputChange (evt) {refs.output.textContent = evt.currentTarget.value};
-if (!evt.currentTarget.length) {refs.output.textContent = 'незнакомец'};
+refs.input.oninput = function () {
+    if (refs.input.value === '') {
+        refs.output.innerHTML = 'незнакомец';
+    } else {
+        refs.output.innerHTML = refs.input.value;
+    }
+  }
+
+
+
+
+
+// refs.input.addEventListener('input', onInputChange);
+
+// function onInputChange () {
+//     // refs.output.textContent = evt.currentTarget.value
+
+//     if (refs.input.value = '') {refs.output.innerHTML = 'незнакомец'}
+//     else { refs.output.innerHTML = refs.input.value;};
+//     console.log("~ refs.input.value", refs.input.value)
+// };
+// // if (!evt.currentTarget.length) {refs.output.textContent = 'незнакомец'};
 
 
 

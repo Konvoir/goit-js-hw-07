@@ -10,11 +10,10 @@ buttonIncrement.addEventListener('click', onButtonIncrement);
 
 function onButtonDecrement () {spanValue -= 1;
   counterValue.innerText = spanValue
-
   console.log("~ counterValue ", counterValue );};
   
 function onButtonIncrement () {spanValue += 1
-  counterValue.innerText = spanValue
+  counterValue.innerText = spanValue;
   console.log("~ counterValue ", counterValue );};
 
 
